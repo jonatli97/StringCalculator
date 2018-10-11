@@ -10,4 +10,4 @@ function add (number){
     else 
         return parseInt(number);
 }
-module.export = add;
+module.exports = add;

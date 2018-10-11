@@ -1,10 +1,10 @@
-const add = require("./calcluator");
+const add = require("./StringCalculator.js");
 it("should return zero on an empty string", ()=>{
-    expect("").toBe(0);
+    expect(add("")).toBe(0);
 });
 
 it("should return number when only one number is in the string", ()=>{
-    expect("5").toBe(5);
+    expect(add("5")).toBe(5);
 });
 
 it("should return sum of two given numbers", ()=>{
