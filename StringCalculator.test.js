@@ -18,3 +18,11 @@ it("should summerize multiple numbers", ()=>{
 it("should summerize multiple numbers that are sepperated by a new line or a comma", ()=>{
     expect(add("1\n2,3")).toBe(6);
 });
+
+it("should write out negative numbers that are not allowed", ()=>{
+    expect(add("-1,2")).toBe("Negatives not allowed: -1");
+});
+
+it("should write out negative numbers that are not allowed", ()=>{
+    expect(add("2,-4,3,-5")).toBe("Negatives not allowed: -4,-5");
+});

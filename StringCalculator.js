@@ -9,7 +9,17 @@ function add (number){
             var numberArray = number.replace(/\n/g, ",").split(",");
             return sum(numberArray);
         }
-
+        if(number.includes("-")){
+            var negatives = [];
+            var tmpArr = number.split(",");
+            for(var i = 0; i < tmpArr.length; i++)
+            {
+                if(tmpArr[i].includes("-")){
+                    negatives.push(tmpArr[i]);
+                }
+            }
+            return "Negatives not allowed: " + negatives;
+        }
         var numberArray = number.split(",");
     
         return sum(numberArray);
@@ -26,4 +36,7 @@ for(var i = 0; i < numberArray.length; i++){
 }
     return total;
 }
+
+
+
 module.exports = add;
