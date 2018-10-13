@@ -26,3 +26,6 @@ it("should write out negative numbers that are not allowed", ()=>{
 it("should write out negative numbers that are not allowed", ()=>{
     expect(add("2,-4,3,-5")).toBe("Negatives not allowed: -4,-5");
 });
+it("If number is higher than 999 it should write out zero", ()=>{
+    expect(add("1001,2")).toBe(2);
+});
